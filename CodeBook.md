@@ -1,3 +1,7 @@
+# Getting and Cleaning Data Course Project
+Daniel B. (ddashizzle)
+
+
 #Purpose
 This CodeBook will describe the Code contained in `run_analysis.R`, the Variables involved, the Data, and any Transformations or work performed to clean up the source data.
 
