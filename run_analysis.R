@@ -113,7 +113,7 @@ Create_TidyDataMeans<-function(){
   TidyDataMeans<-cbind(df,TidyDataMeans)
   TidyDataMeans$variable<-NULL
   
-  write.table(TidyDataMeans, file="./data/TidyDataMeans.txt")
+  write.table(TidyDataMeans, file="./data/TidyDataMeans.txt",row.name=FALSE)
   TidyDataMeans<<-TidyDataMeans
 }
 
