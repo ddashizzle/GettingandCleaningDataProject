@@ -85,6 +85,7 @@ Create_TidyData <- function() {
   names(TidyData)<-gsub("std\\()","StandardDeviation",names(TidyData)) #std() = Standard deviation
   names(TidyData)<-gsub("-","",names(TidyData)) #Tidy data should have special characters removed
   
+  write.table(TidyData, file="./data/TidyData.txt")
   TidyData<<-TidyData
 }
 
@@ -112,6 +113,7 @@ Create_TidyDataMeans<-function(){
   TidyDataMeans<-cbind(df,TidyDataMeans)
   TidyDataMeans$variable<-NULL
   
+  write.table(TidyDataMeans, file="./data/TidyDataMeans.txt")
   TidyDataMeans<<-TidyDataMeans
 }
 
