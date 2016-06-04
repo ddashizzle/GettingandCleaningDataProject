@@ -112,6 +112,7 @@ Create_TidyDataMeans<-function(){
   names(df) <- c("activityname", "subject")
   TidyDataMeans<-cbind(df,TidyDataMeans)
   TidyDataMeans$variable<-NULL
+  TidyDataMeans<-dcast(TidyDataMeans, activityname + subject ~ feature, value.var = "value") #translate from long-form data into wide data
   
   write.table(TidyDataMeans, file="./data/TidyDataMeans.txt",row.name=FALSE)
   TidyDataMeans<<-TidyDataMeans
